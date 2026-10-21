@@ -5,9 +5,9 @@ const baseURL = "https://demo.once-ui.com";
 const meta = {
   home: {
     path: "/",
-    title: "Once UI for Next.js",
+    title: "dahlStudio — Thoughtful design for what comes next",
     description:
-      "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
+      "dahlStudio builds clear, characterful brands and digital experiences for people moving good ideas forward.",
     image: "/images/og/home.jpg",
     canonical: "https://once-ui.com",
     robots: "index,follow",
