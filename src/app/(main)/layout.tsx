@@ -69,10 +69,10 @@ export default function RootLayout({
           <Column fillWidth maxHeight="100dvh" aspectRatio="1" horizontal="center" position="absolute" top="0" left="0">
             <Mask maxWidth="m" x={50} y={0} radius={50}>
               <MatrixFx
-                size={1.5}
+                size={2}
                 spacing={5}
                 fps={24}
-                colors={["brand-solid-strong"]}
+                colors={["brand-solid-strong", "scheme-neutral-200"]}
                 flicker
               />
             </Mask>

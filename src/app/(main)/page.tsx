@@ -11,26 +11,27 @@ import {
   Schema,
   Text,
 } from "@once-ui-system/core";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
 
 const services = [
   {
     number: "01",
-    title: "Brand identity",
+    title: "Websites for small businesses",
     description:
-      "Distinctive identities that give your business a clear voice and a lasting impression.",
+      "A custom website that tells customers who you are, what you offer and how to find you. Fast, mobile-friendly and built from scratch.",
     icon: "sparkle",
   },
   {
     number: "02",
-    title: "Digital experiences",
-    description: "Considered websites and digital products, designed to feel as good as they work.",
+    title: "Digital menus",
+    description: "A menu customers can browse on their phone, with clear categories and photos.",
     icon: "globe",
   },
   {
     number: "03",
-    title: "Creative direction",
-    description: "A thoughtful point of view to bring every part of your brand together.",
-    icon: "eye",
+    title: "Care and updates",
+    description: "I handle hosting, updates and small changes for one fixed monthly price. You never have to think about the technical side.",
+    icon: "shield",
   },
 ] as const;
 
@@ -56,9 +57,9 @@ export default function Home() {
           s={{ direction: "column", vertical: "start" }}
         >
           <Column gap="4">
-            <Heading variant="heading-strong-m">dahlStudio</Heading>
+            <Heading variant="heading-strong-m">Dahl Studio</Heading>
             <Text variant="label-default-s" onBackground="neutral-weak">
-              Independent creative studio
+              Web design for small businesses
             </Text>
           </Column>
           <Row gap="8" vertical="center">
@@ -80,39 +81,28 @@ export default function Home() {
           gap="24"
           paddingY="64"
         >
-          <Badge
-            textVariant="label-default-s"
-            border="neutral-alpha-medium"
-            onBackground="neutral-medium"
-            vertical="center"
-            gap="8"
-          >
-            <Icon name="sparkle" size="s" onBackground="brand-medium" />
-            Design with intention
-          </Badge>
           <Column maxWidth="m">
             <Heading variant="display-strong-xl" wrap="balance">
-              Thoughtful design for what comes next.
+              Websites that make small businesses look as good as they are.
             </Heading>
           </Column>
           <Column maxWidth="s">
             <Text variant="heading-default-l" onBackground="neutral-weak" wrap="balance">
-              dahlStudio builds clear, characterful brands and digital experiences for people moving
-              good ideas forward.
+              I design and build fast, modern websites for restaurants, shops and local businesses, from first sketch to launch, with one person handling everything.
             </Text>
           </Column>
           <Row gap="12" wrap>
             <Button href="#contact" size="m" arrowIcon>
-              Start a project
+              Book a session
             </Button>
             <Button href="#services" variant="tertiary" size="m">
-              Explore services
+              See my work
             </Button>
           </Row>
           <Row fillWidth gap="16" vertical="center" marginTop="32">
             <Line fillWidth background="neutral-alpha-weak" />
             <Text variant="label-default-s" onBackground="neutral-weak">
-              BRAND · DIGITAL · DIRECTION
+              Based in Kristiansund, Norway. Available for remote work worldwide.
             </Text>
           </Row>
         </Column>
@@ -121,13 +111,13 @@ export default function Home() {
           <Row fillWidth horizontal="between" vertical="end" gap="24" wrap>
             <Column gap="12">
               <Text variant="label-default-s" onBackground="brand-medium">
-                WHAT WE DO
+                WHAT I DO
               </Text>
-              <Heading variant="display-strong-s">Good work, made meaningful.</Heading>
+              <Heading variant="display-strong-s">Website design and development</Heading>
             </Column>
             <Column maxWidth="xs">
               <Text variant="body-default-m" onBackground="neutral-weak">
-                From the first idea to the final detail, we make every choice count.
+                One person, one point of contact, from first sketch to launch and beyond.
               </Text>
             </Column>
           </Row>
@@ -146,7 +136,14 @@ export default function Home() {
                   <Text variant="label-default-s" onBackground="neutral-weak">
                     {service.number}
                   </Text>
-                  <Icon name={service.icon} size="m" onBackground="brand-medium" />
+                  {service.icon === "shield" ? (
+                    <IoShieldCheckmarkOutline
+                      size={24}
+                      color="var(--brand-on-background-medium)"
+                    />
+                  ) : (
+                    <Icon name={service.icon} size="m" onBackground="brand-medium" />
+                  )}
                 </Row>
                 <Column gap="12">
                   <Heading variant="heading-strong-m">{service.title}</Heading>
@@ -177,9 +174,11 @@ export default function Home() {
             <Column gap="12">
               <Heading variant="display-strong-s">Let&apos;s make it matter.</Heading>
               <Text variant="body-default-l" onBackground="neutral-weak">
-                Tell us a little about your next project. We&apos;d love to hear what you&apos;re
-                thinking.
+                Tell me a little about your business and what you need. I&apos;ll get back to you within 24 hours.
               </Text>
+            <Button href="#contact" size="m" arrowIcon>
+              Book a session
+            </Button>
             </Column>
           </Row>
         </Column>
@@ -194,7 +193,7 @@ export default function Home() {
           wrap
         >
           <Text variant="label-default-s" onBackground="neutral-weak">
-            dahlStudio
+            Dahl Studio
           </Text>
           <Text variant="label-default-s" onBackground="neutral-weak">
             Independent by nature. Thoughtful by design.
